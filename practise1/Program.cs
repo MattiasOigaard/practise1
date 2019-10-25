@@ -6,16 +6,35 @@ namespace practise1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            int number = new Random().Next(1, 10);
 
-            int factorial = 1;
-            for (int i = 1; i <= number; i++)
+            Console.WriteLine("Number is "+ number);
+            for (int i = 0; i < 4; i++)
             {
-                factorial *= i;
-            }
+                Console.WriteLine("Guess the number: ");
+                int guess = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("{0}! = {1}", number, factorial);
+                if (guess == number)
+                {
+                    Console.WriteLine("You won!");
+                    return;
+                }
+            }
+            Console.WriteLine("You lost!");
+        }
+
+        static void Exersice3() 
+        {
+            //Console.Write("Enter a number: ");
+            //int number = Convert.ToInt32(Console.ReadLine());
+
+            //int factorial = 1;
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    factorial *= i;
+            //}
+
+            //Console.WriteLine("{0}! = {1}", number, factorial);
         }
 
         static void Exersice2() 
