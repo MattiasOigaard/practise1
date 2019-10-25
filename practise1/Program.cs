@@ -6,21 +6,40 @@ namespace practise1
     {
         static void Main(string[] args)
         {
-            int number = new Random().Next(1, 10);
+            Console.WriteLine("Enter numbers separated by a comma: ");
+            string input = Console.ReadLine();
 
-            Console.WriteLine("Number is "+ number);
-            for (int i = 0; i < 4; i++)
+            string[] numbers = input.Split(',');
+            int max = Convert.ToInt32(numbers[0]);
+
+            foreach (string str in numbers)
             {
-                Console.WriteLine("Guess the number: ");
-                int guess = Convert.ToInt32(Console.ReadLine());
-
-                if (guess == number)
-                {
-                    Console.WriteLine("You won!");
-                    return;
-                }
+                int number = Convert.ToInt32(str);
+                if (number > max)
+                    max = number;
             }
-            Console.WriteLine("You lost!");
+
+            Console.WriteLine("Max is " + max);
+
+        }
+
+        static void Exersice4()
+        {
+            //int number = new Random().Next(1, 10);
+
+            //Console.WriteLine("Number is " + number);
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.WriteLine("Guess the number: ");
+            //    int guess = Convert.ToInt32(Console.ReadLine());
+
+            //    if (guess == number)
+            //    {
+            //        Console.WriteLine("You won!");
+            //        return;
+            //    }
+            //}
+            //Console.WriteLine("You lost!");
         }
 
         static void Exersice3() 
