@@ -6,18 +6,32 @@ namespace practise1
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            while (true)
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            int factorial = 1;
+            for (int i = 1; i <= number; i++)
             {
-                Console.Write("Enter a number (or type 'ok' to exit): ");
-                string input = Console.ReadLine();
-
-                if (input.ToLower() == "ok")
-                    break;
-
-                sum += Convert.ToInt32(input);
+                factorial *= i;
             }
-            Console.WriteLine("The sum of all numbers is: " + sum);
+
+            Console.WriteLine("{0}! = {1}", number, factorial);
+        }
+
+        static void Exersice2() 
+        {
+            //int sum = 0;
+            //while (true)
+            //{
+            //    Console.Write("Enter a number (or type 'ok' to exit): ");
+            //    string input = Console.ReadLine();
+
+            //    if (input.ToLower() == "ok")
+            //        break;
+
+            //    sum += Convert.ToInt32(input);
+            //}
+            //Console.WriteLine("The sum of all numbers is: " + sum);
         }
 
         static void Exersice1() 
