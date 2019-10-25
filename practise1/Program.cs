@@ -6,21 +6,15 @@ namespace practise1
     {
         static void Main(string[] args)
         {
-            while (true)
+            int count = 0;
+            for (int i = 0; i <= 100; i++)
             {
-                Console.Write("Write your name: ");
-                string input = Console.ReadLine();
-
-                if (!String.IsNullOrWhiteSpace(input))
-                {
-                    Console.WriteLine("@echo: " + input);
-                    continue;
-                }
-
-                    break;
-
-                                                                                        
+                if (i % 3 == 0)
+                    count++;
             }
+
+            Console.WriteLine("There are {0} numbers divisable by 3 between 1 and 100.", count);
         }
+         
     }
 }
